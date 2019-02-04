@@ -1,12 +1,23 @@
 version: "3"
 services:
-  app:
+  datastore:
     build: "."
     container_name: "gae-py3-datastore"
     ports:
-      - "8080:8080"
-      - "8000:8000"
       - "24000:24000"
     volumes:
       - "./app:/app"
-    command: "dev_appserver.py app.yaml --host=0.0.0.0 --admin_host=0.0.0.0 --support_datastore_emulator=yes --datastore_emulator_port=24000"
+    command: "gcloud beta emulators datastore start --host-port=0.0.0.0:24000 --project=test"
+  app:
+    build: "."
+    container_name: "gae-py3-flask-app"
+    ports:
+      - "8080:8080"
+      - "8000:8000"
+    volumes:
+      - "./app:/app"
+    links:
+      - datastore
+    depends_on:
+      - datastore
+    command: "dev_appserver.py app.yaml --host=0.0.0.0 --admin_host=0.0.0.0 --support_datastore_emulator=true --datastore_emulator_port=24000 --running_datastore_emulator_host=0.0.0.0"
