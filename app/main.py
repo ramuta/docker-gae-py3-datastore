@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "App Engine with Python 3"
+    return "App Engine with Python 3 "
 
 
 @app.route("/message")

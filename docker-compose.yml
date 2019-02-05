@@ -5,8 +5,9 @@ services:
     container_name: "gae-py3-datastore"
     ports:
       - "8080:8080"
+      - "8081:8081"
       - "8000:8000"
-      - "24000:24000"
+      - "9000:9000"
     volumes:
       - "./app:/app"
-    command: "dev_appserver.py app.yaml --host=0.0.0.0 --admin_host=0.0.0.0 --support_datastore_emulator=yes --datastore_emulator_port=24000"
+    command: sh -c "./build.sh"
