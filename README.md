@@ -2,6 +2,8 @@
 
 This Docker image can help you set up a GAE (Python 3) development environment in less than a minute.
 
+> P.S.: Looking for fellow contributors ([click here](https://github.com/ramuta/docker-gae-py3-datastore/issues/2)) :)
+
 ## Steps
 
 1. Download and install [Docker Desktop](https://www.docker.com/products/docker-desktop)
