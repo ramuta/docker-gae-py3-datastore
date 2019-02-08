@@ -14,8 +14,8 @@ And that's it! A sample Flask app is now running in this Docker environment and 
 
 This project allows you to:
 
-1. run your GAE app and Datastore Emulator in the **same** container (see the [master branch](https://github.com/ramuta/docker-gae-py3-datastore/tree/master), or
-2. run your GAE app and Datastore Emulator in **separate** containers (see the ["datastore-separate-container" branch](https://github.com/ramuta/docker-gae-py3-datastore/tree/datastore-separate-container).
+1. run your GAE app and Datastore Emulator in the **same** container (see the [master branch](https://github.com/ramuta/docker-gae-py3-datastore/tree/master)), or
+2. run your GAE app and Datastore Emulator in **separate** containers (see the ["datastore-separate-container" branch](https://github.com/ramuta/docker-gae-py3-datastore/tree/datastore-separate-container)).
 
 ## Shutting down the Docker environment
 
